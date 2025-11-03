@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STRICT EULA - All Rights Reserved</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2c3e50;
+            --secondary: #c0392b;
+            --accent: #e74c3c;
+            --light: #fdf6f6;
+            --dark: #2c3e50;
+            --gray: #7f8c8d;
+            --warning: #e67e22;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: linear-gradient(135deg, #f9f9f9 0%, #f1f1f1 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            margin-bottom: 30px;
+            border-bottom: 5px solid var(--secondary);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .eula-container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            margin-bottom: 30px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section h2 {
+            color: var(--primary);
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .section h3 {
+            color: var(--secondary);
+            margin: 25px 0 15px;
+            font-size: 1.4rem;
+        }
+
+        .section p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .section ul {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        .section li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 10px;
+        }
+
+        .section li:before {
+            content: "•";
+            color: var(--secondary);
+            font-weight: bold;
+            position: absolute;
+            left: -15px;
+        }
+
+        .strict-warning {
+            background: #fff0f0;
+            border: 2px solid var(--accent);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(231, 76, 60, 0.1);
+        }
+
+        .strict-warning h4 {
+            color: var(--accent);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .permission-required {
+            background: #fff9e6;
+            border: 2px solid var(--warning);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+
+        .permission-required h4 {
+            color: var(--warning);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .agreement-box {
+            background: #f8f9fa;
+            border: 3px solid var(--primary);
+            border-radius: 8px;
+            padding: 25px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            font-size: 1.1rem;
+        }
+
+        .checkbox-container input {
+            margin-right: 15px;
+            transform: scale(1.5);
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            margin: 10px;
+            font-weight: 600;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn:hover {
+            background: #a2352a;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-accept {
+            background: #27ae60;
+        }
+
+        .btn-accept:hover {
+            background: #219653;
+        }
+
+        .btn-decline {
+            background: var(--accent);
+        }
+
+        .btn-decline:hover {
+            background: #c0392b;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--gray);
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+            margin-top: 30px;
+        }
+
+        .license-badge {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            margin: 0 5px;
+            font-weight: bold;
+        }
+
+        .toc {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-left: 5px solid var(--secondary);
+        }
+
+        .toc h3 {
+            margin-top: 0;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .toc ul {
+            columns: 2;
+            margin-left: 20px;
+        }
+
+        .toc li {
+            margin-bottom: 8px;
+        }
+
+        .toc a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .toc a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-info {
+            background: #e8f4fd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 5px solid #3498db;
+        }
+
+        .contact-info h3 {
+            color: #2980b9;
+            margin-top: 0;
+        }
+
+        .code-block {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Source Code Pro', monospace;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .eula-container {
+                padding: 20px;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .toc ul {
+                columns: 1;
+            }
+            
+            .btn {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-ban"></i> STRICT EULA - ALL RIGHTS RESERVED</h1>
+            <p>No Usage, Redistribution, or Modification Without Explicit Permission</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="toc">
+            <h3><i class="fas fa-list"></i> Table of Contents</h3>
+            <ul>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#definitions">Definitions</a></li>
+                <li><a href="#prohibitions">Strict Prohibitions</a></li>
+                <li><a href="#permission-requirements">Permission Requirements</a></li>
+                <li><a href="#enforcement">Enforcement</a></li>
+                <li><a href="#termination">Termination</a></li>
+                <li><a href="#disclaimer">Disclaimer</a></li>
+                <li><a href="#contact">Contact for Permissions</a></li>
+                <li><a href="#acceptance">Acceptance</a></li>
+            </ul>
+        </div>
+
+        <div class="eula-container">
+            <div class="section" id="introduction">
+                <h2>Introduction</h2>
+                <p>This <strong>STRICT END USER LICENSE AGREEMENT</strong> ("EULA") is a legal agreement between you (the "User") and the copyright owner ("Owner") governing all access and use of the provided software code, scripts, libraries, and related documentation ("Protected Materials").</p>
+                
+                <div class="strict-warning">
+                    <h4><i class="fas fa-exclamation-triangle"></i> IMPORTANT NOTICE</h4>
+                    <p>By viewing, accessing, downloading, or in any way interacting with the Protected Materials, you acknowledge that <strong>ALL RIGHTS ARE RESERVED</strong> and that <strong>NO USAGE, REDISTRIBUTION, OR MODIFICATION IS PERMITTED</strong> without explicit written permission from the Owner.</p>
+                </div>
+                
+                <p>This EULA supersedes any previous agreements or understandings and represents the complete agreement between you and the Owner regarding the Protected Materials.</p>
+            </div>
+
+            <div class="section" id="definitions">
+                <h2>Definitions</h2>
+                <p>For the purposes of this EULA:</p>
+                <ul>
+                    <li><strong>"Protected Materials"</strong> means all source code, object code, documentation, designs, and any related materials provided.</li>
+                    <li><strong>"Owner"</strong> means the copyright holder and original creator of the Protected Materials.</li>
+                    <li><strong>"User"</strong> means any individual or entity that accesses, views, or otherwise interacts with the Protected Materials.</li>
+                    <li><strong>"Usage"</strong> includes but is not limited to: viewing, copying, executing, modifying, or deriving benefit from the Protected Materials.</li>
+                    <li><strong>"Redistribution"</strong> means sharing, publishing, transmitting, or making available to any third party.</li>
+                    <li><strong>"Modification"</strong> means altering, adapting, translating, or creating derivative works.</li>
+                </ul>
+            </div>
+
+            <div class="section" id="prohibitions">
+                <h2>Strict Prohibitions</h2>
+                <p>The following activities are <strong>EXPRESSLY PROHIBITED</strong> without prior written consent from the Owner:</p>
+                
+                <div class="strict-warning">
+                    <h4><i class="fas fa-ban"></i> PROHIBITED ACTIVITIES</h4>
+                    <ul>
+                        <li><strong>Usage:</strong> You may not use the Protected Materials in any way, including personal, educational, or commercial use</li>
+                        <li><strong>Redistribution:</strong> You may not share, publish, or distribute the Protected Materials in any form</li>
+                        <li><strong>Modification:</strong> You may not modify, adapt, or create derivative works based on the Protected Materials</li>
+                        <li><strong>Commercial Exploitation:</strong> You may not use the Protected Materials for any commercial purpose</li>
+                        <li><strong>Reverse Engineering:</strong> You may not decompile, disassemble, or reverse engineer the Protected Materials</li>
+                        <li><strong>Incorporation:</strong> You may not incorporate any portion of the Protected Materials into other works</li>
+                    </ul>
+                </div>
+                
+                <h3>No Implied Licenses</h3>
+                <p>No license to the Protected Materials is granted, either expressly or by implication, estoppel, or otherwise. All rights not expressly granted herein are reserved by the Owner.</p>
+            </div>
+
+            <div class="section" id="permission-requirements">
+                <h2>Permission Requirements</h2>
+                <p>Any use, redistribution, or modification of the Protected Materials requires explicit written permission from the Owner.</p>
+                
+                <div class="permission-required">
+                    <h4><i class="fas fa-file-signature"></i> PERMISSION PROCESS</h4>
+                    <ul>
+                        <li>Submit a formal written request to the Owner</li>
+                        <li>Clearly state the intended use case and scope</li>
+                        <li>Include details about redistribution plans if applicable</li>
+                        <li>Wait for explicit written approval before proceeding</li>
+                        <li>Comply with any conditions specified in the permission grant</li>
+                    </ul>
+                </div>
+                
+                <h3>Permission Denial</h3>
+                <p>The Owner reserves the unconditional right to deny any permission request for any reason, without explanation or liability.</p>
+                
+                <div class="code-block">
+                    // EXAMPLE OF PROPER ATTRIBUTION (if permission granted)<br>
+                    /*<br>
+                    * This code is used with permission from [Owner Name]<br>
+                    * Original work: [Project Name]<br>
+                    * Permission granted for: [Specific Use Case]<br>
+                    * All rights remain with the original owner<br>
+                    */
+                </div>
+            </div>
+
+            <div class="section" id="enforcement">
+                <h2>Enforcement</h2>
+                <p>The Owner will actively enforce these terms and pursue all available legal remedies for violations.</p>
+                
+                <div class="strict-warning">
+                    <h4><i class="fas fa-gavel"></i> LEGAL CONSEQUENCES</h4>
+                    <ul>
+                        <li>Immediate termination of any granted permissions</li>
+                        <li>Legal action for copyright infringement</li>
+                        <li>Pursuit of monetary damages</li>
+                        <li>Injunctive relief to prevent further violations</li>
+                        <li>Recovery of legal fees and costs</li>
+                    </ul>
+                </div>
+                
+                <h3>Violation Reporting</h3>
+                <p>If you become aware of any violations of this EULA, please contact the Owner immediately. Reports can be made anonymously.</p>
+            </div>
+
+            <div class="section" id="termination">
+                <h2>Termination</h2>
+                <p>This EULA is effective until terminated. Your rights under this EULA will terminate automatically without notice if you fail to comply with any terms.</p>
+                
+                <p>Upon termination, you must:</p>
+                <ul>
+                    <li>Immediately cease all use of the Protected Materials</li>
+                    <li>Destroy all copies of the Protected Materials in your possession</li>
+                    <li>Remove any references to the Protected Materials from your projects</li>
+                    <li>Provide written confirmation of compliance to the Owner</li>
+                </ul>
+            </div>
+
+            <div class="section" id="disclaimer">
+                <h2>Disclaimer of Warranty</h2>
+                <p>The Protected Materials are provided "AS IS" without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and noninfringement.</p>
+                
+                <p>In no event shall the Owner be liable for any claim, damages, or other liability, whether in an action of contract, tort, or otherwise, arising from, out of, or in connection with the Protected Materials.</p>
+            </div>
+
+            <div class="section" id="contact">
+                <h2>Contact for Permissions</h2>
+                
+                <div class="contact-info">
+                    <h3><i class="fas fa-envelope"></i> Permission Requests</h3>
+                    <p>All permission requests must be submitted in writing to:</p>
+                    <p><strong>Email:</strong> legal@owner-domain.com</p>
+                    <p><strong>Subject:</strong> Permission Request - [Your Intended Use]</p>
+                    <p>Please allow 30 days for a response. Incomplete requests will not be processed.</p>
+                </div>
+                
+                <h3>Required Information</h3>
+                <p>Your permission request must include:</p>
+                <ul>
+                    <li>Your full name and contact information</li>
+                    <li>Specific identification of the Protected Materials you wish to use</li>
+                    <li>Detailed description of intended use</li>
+                    <li>Duration and scope of requested permission</li>
+                    <li>Commercial or non-commercial context</li>
+                </ul>
+            </div>
+
+            <div class="section" id="acceptance">
+                <h2>Acceptance</h2>
+                <p>By proceeding, you acknowledge that you have read, understood, and agree to be bound by the terms of this STRICT EULA.</p>
+                
+                <div class="agreement-box">
+                    <h3><i class="fas fa-handshake"></i> Agreement Confirmation</h3>
+                    <p>You must explicitly agree to these terms before accessing the Protected Materials.</p>
+                    
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="agree" name="agree">
+                        <label for="agree">I HAVE READ AND AGREE TO ALL TERMS OF THIS STRICT EULA</label>
+                    </div>
+                    
+                    <p><strong>Warning:</strong> Violation of these terms may result in legal action.</p>
+                    
+                    <div>
+                        <button class="btn btn-accept" onclick="acceptEULA()"><i class="fas fa-check-circle"></i> I ACCEPT</button>
+                        <button class="btn btn-decline" onclick="declineEULA()"><i class="fas fa-times-circle"></i> I DECLINE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2023 All Rights Reserved. This EULA is a legal document.</p>
+            <p>Unauthorized use, redistribution, or modification is strictly prohibited.</p>
+            <p><span class="license-badge">ALL RIGHTS RESERVED</span></p>
+        </footer>
+    </div>
+
+    <script>
+        function acceptEULA() {
+            const checkbox = document.getElementById('agree');
+            if (!checkbox.checked) {
+                alert('You must check the agreement box before accepting.');
+                return;
+            }
+            
+            alert('STRICT EULA ACCEPTED\n\nYou acknowledge that:\n• No usage is permitted without permission\n• No redistribution is permitted\n• No modification is permitted\n\nViolations will result in legal action.');
+            // In a real implementation, you would log acceptance and grant access
+        }
+        
+        function declineEULA() {
+            if (confirm('By declining, you agree to immediately cease all access to the Protected Materials and destroy any copies in your possession.\n\nAre you sure you want to decline?')) {
+                alert('EULA Declined. You may not access or use the Protected Materials.');
+                // In a real implementation, you would redirect away or restrict access
+            }
+        }
+        
+        // Add smooth scrolling for table of contents links
+        document.querySelectorAll('.toc a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 20,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
